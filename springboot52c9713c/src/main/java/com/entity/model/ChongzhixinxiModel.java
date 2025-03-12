@@ -1,0 +1,182 @@
+package com.entity.model;
+
+import com.entity.ChongzhixinxiEntity;
+
+import com.baomidou.mybatisplus.annotations.TableName;
+import java.util.Date;
+import org.springframework.format.annotation.DateTimeFormat;
+
+import com.fasterxml.jackson.annotation.JsonFormat;
+import java.io.Serializable;
+ 
+
+/**
+ * 充值信息
+ * 接收传参的实体类  
+ *（实际开发中配合移动端接口开发手动去掉些没用的字段， 后端一般用entity就够用了） 
+ * 取自ModelAndView 的model名称
+ * @author 
+ * @email 
+ * @date 2024-03-05 17:02:11
+ */
+public class ChongzhixinxiModel  implements Serializable {
+	private static final long serialVersionUID = 1L;
+
+	 			
+	/**
+	 * 用户姓名
+	 */
+	
+	private String yonghuxingming;
+		
+	/**
+	 * 图片
+	 */
+	
+	private String tupian;
+		
+	/**
+	 * 会员卡金额
+	 */
+	
+	private Integer yue;
+		
+	/**
+	 * 会员等级
+	 */
+	
+	private String huiyuandengji;
+		
+	/**
+	 * 会员折扣
+	 */
+	
+	private String huiyuanzhekou;
+		
+	/**
+	 * 充值时间
+	 */
+		
+	@JsonFormat(locale="zh", timezone="GMT+8", pattern="yyyy-MM-dd HH:mm:ss")
+	@DateTimeFormat 
+	private Date chongzhishijian;
+		
+	/**
+	 * 是否支付
+	 */
+	
+	private String ispay;
+				
+	
+	/**
+	 * 设置：用户姓名
+	 */
+	 
+	public void setYonghuxingming(String yonghuxingming) {
+		this.yonghuxingming = yonghuxingming;
+	}
+	
+	/**
+	 * 获取：用户姓名
+	 */
+	public String getYonghuxingming() {
+		return yonghuxingming;
+	}
+				
+	
+	/**
+	 * 设置：图片
+	 */
+	 
+	public void setTupian(String tupian) {
+		this.tupian = tupian;
+	}
+	
+	/**
+	 * 获取：图片
+	 */
+	public String getTupian() {
+		return tupian;
+	}
+				
+	
+	/**
+	 * 设置：会员卡金额
+	 */
+	 
+	public void setYue(Integer yue) {
+		this.yue = yue;
+	}
+	
+	/**
+	 * 获取：会员卡金额
+	 */
+	public Integer getYue() {
+		return yue;
+	}
+				
+	
+	/**
+	 * 设置：会员等级
+	 */
+	 
+	public void setHuiyuandengji(String huiyuandengji) {
+		this.huiyuandengji = huiyuandengji;
+	}
+	
+	/**
+	 * 获取：会员等级
+	 */
+	public String getHuiyuandengji() {
+		return huiyuandengji;
+	}
+				
+	
+	/**
+	 * 设置：会员折扣
+	 */
+	 
+	public void setHuiyuanzhekou(String huiyuanzhekou) {
+		this.huiyuanzhekou = huiyuanzhekou;
+	}
+	
+	/**
+	 * 获取：会员折扣
+	 */
+	public String getHuiyuanzhekou() {
+		return huiyuanzhekou;
+	}
+				
+	
+	/**
+	 * 设置：充值时间
+	 */
+	 
+	public void setChongzhishijian(Date chongzhishijian) {
+		this.chongzhishijian = chongzhishijian;
+	}
+	
+	/**
+	 * 获取：充值时间
+	 */
+	public Date getChongzhishijian() {
+		return chongzhishijian;
+	}
+				
+	
+	/**
+	 * 设置：是否支付
+	 */
+	 
+	public void setIspay(String ispay) {
+		this.ispay = ispay;
+	}
+	
+	/**
+	 * 获取：是否支付
+	 */
+	public String getIspay() {
+		return ispay;
+	}
+			
+}
